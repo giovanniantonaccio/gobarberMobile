@@ -18,10 +18,7 @@ export function* signIn({ payload }) {
     const { token, user } = response.data;
 
     if (user.provider) {
-      Alert.alert(
-        'Erro no login',
-        'Usuário não pode ser prestador de serviços'
-      );
+      Alert.alert('Erro no login', 'Usuário é prestador de serviços');
       return;
     }
 
@@ -47,7 +44,6 @@ export function* signUp({ payload }) {
       name,
       email,
       password,
-      provider: true,
     });
 
     // history.push('/');
