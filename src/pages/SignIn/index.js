@@ -1,5 +1,5 @@
-import React from 'react';
-import {Image} from 'react-native';
+import React, { useRef } from 'react';
+import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import logo from '../../assets/logo.png';
@@ -15,7 +15,7 @@ import {
   SignLinkText,
 } from './styles';
 
-export default function SignIn({navigation}) {
+export default function SignIn({ navigation }) {
   return (
     <Background>
       <Container>
